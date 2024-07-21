@@ -3,10 +3,10 @@ library(tidyr)
 library(dplyr)
 library(readr)
 
-setwd("/mnt/Working/Programing/Git/tiggax/bion/data")
 
+figure <- "default"
 
-simple_fit <- read.csv("default.csv")
+simple_fit <- read.csv(paste(sep = "", "data/",figure, ".csv"))
 
 simple_fit %>% 
   #mutate(DO = DO * 10000) %>% 
@@ -17,6 +17,8 @@ data %>%
   ggplot(aes(x = minutes, y = val, colour = type)) + 
   geom_line() 
 
-dir.create("fig")
 
-ggsave()
+ggsave(
+  paste("figures/", figure, ".png", sep = ""),
+  dpi = 320,
+)
