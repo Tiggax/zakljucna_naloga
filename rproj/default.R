@@ -2,23 +2,50 @@ library(ggplot2)
 library(tidyr)
 library(dplyr)
 library(readr)
+library(scales)
 
 
 figure <- "default"
+
+vals = c("vcd", "glucose", "glutamin", "oxygen","DO", "c_O2", "volume")
+labels = c("VCD", "glucose", "glutamin", "PID[02]","DO", "c_O2", "volume")
 
 simple_fit <- read.csv(paste(sep = "", "data/",figure, ".csv"))
 
 simple_fit %>% 
   #mutate(DO = DO * 10000) %>% 
-  pivot_longer(cols = !minutes, names_to = "type", values_to = "val") %>% 
-  filter(type != "product")-> data
+  pivot_longer(cols = !minutes, names_to = "type", values_to = "value") %>% 
+  #filter(type != "product") %>% 
+  mutate(type = factor(type, levels = vals, labels = labels)) -> data
 
 data %>% 
-  ggplot(aes(x = minutes, y = val, colour = type)) + 
-  geom_line() 
+  ggplot(aes(x = minutes, y = value, color = type)) + 
+  geom_line() +
+  labs(x = "Days") +
+  scale_x_continuous(labels = \(x) {
+    floor(x / 60 / 24)
+  })
+  
+ggsave(
+  paste("figures/", figure, ".png", sep = ""),
+  dpi = 320,
+)
+
+
+# FACET -------------------------------------------------------------------
+
+
+data %>% 
+  ggplot(aes(x = minutes, y = value, color = type)) + 
+  facet_grid(rows = vars(type), scales = "free") +
+  geom_line() +
+  labs(x = "Days") +
+  scale_x_continuous(labels = \(x) {
+    floor(x / 60 / 24)
+  })
 
 
 ggsave(
-  paste("figures/", figure, ".png", sep = ""),
+  paste("figures/", figure, "-facet.png", sep = ""),
   dpi = 320,
 )
