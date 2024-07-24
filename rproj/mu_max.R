@@ -24,7 +24,7 @@ data <- rbind(max1, max2, max3)
 data %>% 
   ggplot(aes(x = minutes, y = vcd, colour = mu_max)) + 
   geom_line() +
-  labs(x = "Days") +
+  labs(x = "Days", color = "Mu max") +
   scale_x_continuous(labels = \(x) {
     floor(x / 60 / 24)
   })
