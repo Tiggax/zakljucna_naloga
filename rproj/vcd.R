@@ -28,7 +28,7 @@ data %>%
   })
 
 
-dggsave(
+ggsave(
   paste("figures/", figure, ".png", sep = ""),
   dpi = 320,
 )
