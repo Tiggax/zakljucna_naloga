@@ -6,18 +6,16 @@ library(scales)
 
 
 figure <- "mu_max"
-vals = c("vcd", "glucose", "glutamin", "oxygen","DO", "c_O2", "volume")
-labels = c("VCD", "glucose", "glutamin", "PID[02]","DO", "c_O2", "volume")
+vals = c("vcd", "glucose", "glutamin", "oxygen","DO", "c_O2", "volume", "product")
+labels = c("VCD", "glucose", "glutamin", "PID[02]","DO", "c_O2", "volume", "product")
 
 
 max1 <- read.csv(paste(sep = "", "data/",figure, "1.csv")) %>% 
-  #select(minutes, vcd) %>% 
+  
   mutate(mu_max = "0.001")
 max2 <- read.csv("data/default.csv") %>% 
-  #select(minutes, vcd) %>% 
   mutate(mu_max = "0.002")
 max3 <- read.csv(paste(sep = "", "data/",figure, "3.csv")) %>% 
-  #select(minutes, vcd) %>% 
   mutate(mu_max = "0.003") 
 
 data <- rbind(max1, max2, max3) 

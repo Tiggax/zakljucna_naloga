@@ -7,8 +7,8 @@ library(scales)
 
 figure <- "default"
 
-vals = c("vcd", "glucose", "glutamin", "oxygen","DO", "c_O2", "volume")
-labels = c("VCD", "glucose", "glutamin", "PID[02]","DO", "c_O2", "volume")
+vals = c("vcd", "glucose", "glutamin", "oxygen","DO", "c_O2", "volume", "product")
+labels = c("VCD", "glucose", "glutamin", "PID[02]","DO", "c_O2", "volume", "product")
 
 simple_fit <- read.csv(paste(sep = "", "data/",figure, ".csv"))
 
@@ -49,3 +49,4 @@ ggsave(
   paste("figures/", figure, "-facet.png", sep = ""),
   dpi = 320,
 )
+

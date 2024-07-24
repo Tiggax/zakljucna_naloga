@@ -6,16 +6,16 @@ library(scales)
 
 
 figure <- "vcd"
-vals = c("vcd", "glucose", "glutamin", "oxygen","DO", "c_O2", "volume")
-labels = c("VCD", "glucose", "glutamin", "PID[02]","DO", "c_O2", "volume")
+vals = c("vcd", "glucose", "glutamin", "oxygen","DO", "c_O2", "volume", "product")
+labels = c("VCD", "glucose", "glutamin", "PID[02]","DO", "c_O2", "volume", "product")
 
 
 max1 <- read.csv(paste(sep = "", "data/",figure, "4.csv")) %>% 
-  mutate(initial_vcd = "0.004")
+  mutate(initial_vcd = "0.4")
 max2 <- read.csv("data/default.csv") %>% 
-  mutate(initial_vcd = "0.005")
+  mutate(initial_vcd = "0.5")
 max3 <- read.csv(paste(sep = "", "data/",figure, "6.csv")) %>% 
-  mutate(initial_vcd = "0.006")
+  mutate(initial_vcd = "0.6")
 
 data <- rbind(max1, max2, max3)
 
@@ -28,7 +28,7 @@ data %>%
   })
 
 
-ggsave(
+dggsave(
   paste("figures/", figure, ".png", sep = ""),
   dpi = 320,
 )
