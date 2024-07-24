@@ -17,12 +17,13 @@ max2 <- read.csv("data/default.csv") %>%
 max3 <- read.csv(paste(sep = "", "data/",figure, "6.csv")) %>% 
   mutate(initial_vcd = "0.6")
 
-data <- rbind(max1, max2, max3)
+data <- rbind(max1, max2, max3) %>% 
+  select(!c_O2)
 
 data %>% 
   ggplot(aes(x = minutes, y = vcd, colour = initial_vcd)) + 
   geom_line() +
-  labs(x = "Days", color = "Initial VCD") +
+  labs(x = "Days",y = "VCD", color = "Initial VCD") +
   scale_x_continuous(labels = \(x) {
     floor(x / 60 / 24)
   })
@@ -43,7 +44,7 @@ data %>%
   ggplot(aes(x = minutes, y = val, colour = initial_vcd)) + 
   facet_grid(rows = vars(type),scales = "free") +
   geom_line() +
-  labs(x = "Days", color = "Initial VCD") +
+  labs(x = "Days",y = "value", color = "Initial VCD") +
   scale_x_continuous(labels = \(x) {
     floor(x / 60 / 24)
   })
