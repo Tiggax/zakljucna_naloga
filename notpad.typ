@@ -74,8 +74,8 @@ Limitni primeri
   - [ ] tipi
   - [ ] batch
   - [ ] fed-batch
-- [ ] Nelder-mead
-  - [ ] delovanje
+- [x] Nelder-mead
+  - [x] delovanje
 - [ ] masna bilanca
 - [ ] Monod kinetika
 - [x] Process control
