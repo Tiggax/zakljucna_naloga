@@ -5,7 +5,7 @@
 #import "@preview/oxifmt:0.2.1": strfmt
 
 
-#let target = "/data/simple_fit"
+let target = "/data/simple_fit"
 
 #let get_plot(target) = {
   let plots = csv(target + ".csv", row-type: dictionary).map(
@@ -159,4 +159,4 @@
 }
 
 
-#constants_diff("simple_fit")
+constants_diff("simple_fit")

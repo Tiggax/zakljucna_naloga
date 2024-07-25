@@ -98,7 +98,7 @@ In @mu_max it can be seen that
 
 #import "/src/figures/mod.typ": constants_diff_fig
 
-#figure(
-  caption: [],
-  constants_diff_fig("simple_fit")
-)
+//#figure(
+//  caption: [],
+//  constants_diff_fig("simple_fit")
+//)

@@ -15,7 +15,7 @@ For testing dummy data was used seen in @data_figure
     table.header(
       [days], [VCD], [glutamin], [glucose],[$"DO"_50$], [product]
     ),
-    ..csv("/data/dummy-data.csv").slice(1).flatten().map(x => [#strfmt("{:.7}",x)])
+    ..csv("/podatki/data.csv").slice(1).flatten().map(x => [#strfmt("{:.7}",x)])
     
   )
 )<data_figure>
