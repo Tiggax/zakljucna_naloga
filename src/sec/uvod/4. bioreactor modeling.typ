@@ -114,7 +114,7 @@ The workings of @PID controller can be seen in @pid_figure.
 #import "/src/figures/mod.typ": pid_figure, pid_graph
 
 #figure(
-  caption: [Scheme of a PID control system],
+  caption: [Scheme of a PID control system as seen in @Hymel_2023[Fig. 4]],
   pid_graph
 )<pid_graph>
 

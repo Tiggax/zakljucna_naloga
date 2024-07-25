@@ -339,7 +339,7 @@ It is important that the initial working simplex S is _nondegenerate_, meaning t
 #import "/src/figures/mod.typ": simplex_table
 
 #figure(
-  caption: [],
+  caption: [Examples of convex hull in different real n-dimensional spaces],
   simplex_table
 )<simplex>
 
@@ -369,7 +369,7 @@ where $alpha$ is a positive constant, named the _reflection coefficent_ @nelder_
 
 #import "/src/figures/mod.typ": nedel_graph
 #figure(
-  caption: [visualization of the algorithm],
+  caption: [visualization of the algorithm as described in @nelder_1965[Fig. 1]],
   scale(nedel_graph,x: 80%, y: 80%)
 )
 
