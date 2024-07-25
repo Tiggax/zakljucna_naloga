@@ -4,8 +4,8 @@ studij = "Bioinformatika"
 naslov = "Matematični model bioreaktorja CHO celic z dovajanjem"
 title = "Mathematical model of fed-batch bioreactor with CHO cells"
 text_lang = "en"
-kljucne_besede = ["bioreaktor", "modeliranje", "Runge-Kutta"]
-key_words = ["bioreactor", "modeling", "Runge-Kutta"]
+kljucne_besede = ["bioreaktor", "modeliranje", "Runge-Kutta", "Nelder-Mead", "NDE", "simulacija"]
+key_words = ["bioreactor", "modeling", "Runge-Kutta", "Nelder-Mead", "ODE", "simulation"]
 
 [mentor]
 name = "Aleksander Tošić"
