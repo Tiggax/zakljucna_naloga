@@ -1,0 +1,40 @@
+author = "Tilen Gimpelj"
+studij = "Bioinformatika"
+
+naslov = "Matematični model bioreaktorja CHO celic z dovajanjem"
+title = "Mathematical model of fed-batch bioreactor with CHO cells"
+text_lang = "en"
+kljucne_besede = ["bioreaktor", "modeliranje", "Runge-Kutta"]
+key_words = ["bioreactor", "modeling", "Runge-Kutta"]
+
+[mentor]
+name = "Aleksander Tošić"
+sl = ["izr. prof. dr. ", ""]
+en = ["Assoc. Prof.",", PhD"]
+[somentor]
+name = "Domen Vake"
+sl = ["",""]
+en = ["",""]
+[work_mentor]
+name = "Andrej Pohar"
+sl = ["dr.",""]
+en = ["",", PhD"]
+
+
+[kratice]
+"CHO" = "Chinese Hamster Ovary Cells"
+"rCHO" = "recombinant Chinese Hamster Ovary Cells"
+"DNA" = "Deoxyribonucleic acid"
+"SF" = "Serum Free"
+"FDA" = "Food and Drug Administration"
+"GMO" = "Geneticly modafied organism"
+"EMEM" = "Eagle's minimum essential medium"
+"PUMS" = "Peking Union Medical School"
+"PUMC" = "Peking Union Medical College"
+"ODE" = "Ordinary differential equation"
+"LDE" = "Linear differencial equation"
+"RK" = "Runge-Kutta"
+"UI" = "User interface"
+"VCD" = "Viable cell density"
+"PID" = "proportional integral derivative"
+"DO" = "Dissolved oxygen"
