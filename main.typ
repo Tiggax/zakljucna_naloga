@@ -29,7 +29,7 @@
   bib_file: bibliography(
     "references.bib",
     style: "ieee",
-    title: [Bibliography],
+    title: [References],
   ),
 )
 
