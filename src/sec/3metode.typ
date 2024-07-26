@@ -3,7 +3,10 @@
 #import "@preview/sourcerer:0.2.1": code
 #import "@preview/oxifmt:0.2.1": strfmt
 
-For testing dummy data was used seen in @data_figure
+
+
+= Dummy data of a bioreactor process
+
 
 
 #figure(
@@ -28,31 +31,15 @@ For testing dummy data was used seen in @data_figure
   kaj se je delalo, kako, kateri parametri, kateri programi, i.t.d.
 ]
 
-The system was built in the Rust programing language and built using comunity packages seen in @deps. @UI was implemented using the `egui` library.
-Solutions to @ODE were solved using a modified version of `ode_solvers` package.
-`serde`, `serde_json` and `csv` were used for data serialization.
-#todo[je kaj v tej smeri vredu?]
-
-#let deps = toml("/data/Cargo.toml")
-
-#figure(
-  caption: [Cargo Dependencies used and their versions],
-  table(
-    columns: 2,
-    fill: (x,y) => if y == 0 {color.mix(teal, white)},
-    table.header(
-      [Library],[Version],
-    ),
-    ..deps.dependencies.pairs().map(((name, version)) => (
-      [#name],if type(version) == str {[#version]} else if "version" in version.keys(){[#version.version]} else {[#version.git<#version.branch>]}
-    )).flatten(),
-  )
-)<deps>
+In order to model the bioreactor a system of @ODE was created.
+An application (discussed further in @app-sec) was built for calculations of the system of @ODE used to model the bioreactor.
 
 
 
 
-= System
+
+
+= The System of ordinary differential equations
 
 #let d(n) = $d(#n)/(d t)$
 
@@ -179,7 +166,7 @@ $
 #d($#x$) = - "OUR" + "OTR"
 $
 
-= Totalna bilanca
+== Totalna bilanca
 
 Total bilance gets applied only after  days bigger than `FEED_MIN`.
 and contains:
@@ -213,3 +200,27 @@ The system was defined with constants seen in @constants. It should be assumed, 
 
 
 
+= the Application<app-sec>
+
+
+
+was built in the Rust programing language and built using community packages seen in @deps. 
+@UI was implemented using the `egui` library.
+Solutions to @ODE were solved using a modified version of `ode_solvers` package.
+`serde`, `serde_json` and `csv` were used for data serialization.
+
+#let deps = toml("/data/Cargo.toml")
+
+#figure(
+  caption: [Cargo Dependencies used and their versions],
+  table(
+    columns: 2,
+    fill: (x,y) => if y == 0 {color.mix(teal, white)},
+    table.header(
+      [Library],[Version],
+    ),
+    ..deps.dependencies.pairs().map(((name, version)) => (
+      [#name],if type(version) == str {[#version]} else if "version" in version.keys(){[#version.version]} else {[#version.git<#version.branch>]}
+    )).flatten(),
+  )
+)<deps>

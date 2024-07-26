@@ -5,22 +5,24 @@
 = Introduction
 
 
-
 #include "uvod/1. intro.typ"
 
-= Bioreactors
+== Purpose
+#include "/src/sec/2namen.typ"
+
+== Bioreactors
 
 #include "uvod/2. bioreactors.typ"
 
-= Numerical Methods
+== Numerical Methods
 
 #include "uvod/3. num metode.typ"
 
-= Bioreactor Modeling
+== Bioreactor Modeling
 
 #include "uvod/4. bioreactor modeling.typ"
 
-= Model
+== Model
 
 #include "uvod/5. model.typ"
 

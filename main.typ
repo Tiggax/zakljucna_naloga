@@ -48,8 +48,7 @@
 // - - - - - - - - - - - - - - - - - -
 
 #include "/src/sec/1uvod.typ"
-= Purpose
-#include "/src/sec/2namen.typ"
+
 = Methods
 #include "/src/sec/3metode.typ"
 = Results
