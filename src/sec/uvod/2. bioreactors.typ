@@ -1,12 +1,14 @@
+#set heading(offset: 1)
+
 #import "../../additional.typ": todo
 
 #import "/src/figures/mod.typ": reactor, batch_reactor
 
 
-A bioreactor is typically described as an apparatus shaped like a chamber, used for growing organisms such as bacteria or yeast.
+A bioreactor is typically described as an apparatus containing a chamber in which organisms such as bacteria or yeast are grown.
 The purpose of it is the production of biomolecular metabolites or biopolymers or conversion of organic wastes @mandenius_2016[p. 8].
 
-Even if the first impression the bioreactor gives is something mondaine, they represent vital components in biotechnological processes, particularly in modern pharmaceutical production. 
+Even if the first impression the bioreactor gives is something mundane, they represent vital components in biotechnological processes, particularly in modern pharmaceutical production. 
 
 They are instruments or systems engineered to provide an optimal environment wherein biological reactions can catalyze, facilitating the growth of cells, tissues, or microbial cultures. 
 They are used in production of food, chemicals and drugs.

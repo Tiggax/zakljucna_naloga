@@ -1,3 +1,4 @@
+#set heading(offset: 1)
 #import "/src/additional.typ": todo
 
 #import "@preview/cetz:0.2.2": canvas, plot, draw, vector
