@@ -108,7 +108,7 @@ Building upon this work, Hiroki Murakami and colleagues identified four critical
 Quantitative modeling integrates both kinetics for some key reaction steps and optimization-driven metabolic flux allocation, using flux balance analysis; this is known to lead to certain mathematical inconsistencies. Here, we propose a physically-informed data-driven hybrid model (a “gray box”) to learn models of the dynamical evolution of Chinese Hamster Ovary (CHO) cell bioreactors from process data. The approach incorporates physical laws (e.g. mass balances) as well as kinetic expressions for metabolic fluxes
 @Cui_2023[p.1]
 
-The advantage of using CHO cells is that the correct (i.e., mammalian-specific) glycosylation patterns are achieved for the protein therapeutics (e.g., therapeutic antibodies) @Cui_2023[p.1].
+#done[The advantage of using CHO cells is that the correct (i.e., mammalian-specific) glycosylation patterns are achieved for the protein therapeutics (e.g., therapeutic antibodies) @Cui_2023[p.1].]
 
 == Butler 2005
 

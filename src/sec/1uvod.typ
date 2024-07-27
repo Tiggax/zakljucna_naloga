@@ -10,6 +10,8 @@
 == Purpose
 #include "/src/sec/2namen.typ"
 
+= Theory
+
 == Bioreactors
 
 #include "uvod/2. bioreactors.typ"

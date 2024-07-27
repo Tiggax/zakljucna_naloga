@@ -22,6 +22,7 @@ en = ["",", PhD"]
 
 
 [kratice]
+"GMP" = "Good manufacturing practices"
 "CHO" = "Chinese Hamster Ovary Cells"
 "rCHO" = "recombinant Chinese Hamster Ovary Cells"
 "DNA" = "Deoxyribonucleic acid"

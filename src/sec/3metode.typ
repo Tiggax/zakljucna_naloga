@@ -188,7 +188,7 @@ $
 $
 
 
-The system was defined with constants seen in @constants. It should be assumed, that any omitted values will be as in @constants. #todo[a je bolš da je tabela kot priloga?]
+The system was defined with constants seen in @constants. It should be assumed, that any omitted values will be as in @constants.
 
 #import "/src/figures/mod.typ": constants_fig
 
@@ -204,10 +204,12 @@ The system was defined with constants seen in @constants. It should be assumed, 
 
 
 
-was built in the Rust programing language and built using community packages seen in @deps. 
-@UI was implemented using the `egui` library.
-Solutions to @ODE were solved using a modified version of `ode_solvers` package.
-`serde`, `serde_json` and `csv` were used for data serialization.
+The application was built in the Rust programing language and built using community packages seen in @deps. 
+@UI was implemented using the `egui` library, while the solutions to @ODE were computed using a modified version of `ode_solvers` package.
+The package changed the provided `y` values of each iteration to become mutable, meaning the values of any current step could be modified.
+This was made so that the @PID controller values could reflect the current output of each step.
+Dependencies `serde`, `serde_json` and `csv` were used for data serialization.
+This was used to ease the injection of data, the system values and to be able to save the results of the minimization.
 
 #let deps = toml("/data/Cargo.toml")
 
@@ -224,3 +226,10 @@ Solutions to @ODE were solved using a modified version of `ode_solvers` package.
     )).flatten(),
   )
 )<deps>
+
+
+
+#figure(
+  caption: [Image of the application interface],
+  image("/figures/bion-app.png")
+)

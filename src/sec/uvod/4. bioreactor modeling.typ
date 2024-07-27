@@ -8,7 +8,7 @@
 #rect(
 $"accumulation" = "in" - "out"$)
 
-Mass balance is a fundemental principle in bioreactor modeling.
+Mass balance is a fundamental principle in bioreactor modeling.
 It is used to describe flow of mass into, within and out of a bioreactor.
 This ensures that all mass entering the system is accounted for in either the product, waste or within the reactor itself.
 
@@ -49,7 +49,7 @@ $
 
 This relation is commonly named the _Monod function_, although it was initially proposed by Michaelis–Menten and later extended by Monod to describe the growth of microorganisms.
 
-Many different mathematical formulas could be used to similarlly fit the data, but it is convinient to adopt hyperbolic @monod_eq @monod_2012[p. 383].
+Many different mathematical formulas could be used to similarly fit the data, but it is convenient to adopt hyperbolic @monod_eq @monod_2012[p. 383].
 
 The function follows a principal that low amount of substrate concentration gives low growth rate and if the substrate concentration increases, the growth rate also increases.
 For higher substrate levels, the growth rate increases diminishingly as it can be seen in @monod_f @carlsson_1998.
@@ -80,7 +80,6 @@ mu(K_S) = mu_"max" dot cancel(K_S) / (2 dot cancel(K_S) ) \
 mu(K_S) = mu_"max" / 2
 $
 This can graphically be seen in @monod_half.
-#todo[nevem kako točno to vključt notr. a sam vn vržem?]
 
 #let k = 1
 #let mu_max = 1

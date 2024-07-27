@@ -184,7 +184,7 @@ where the
 - $y^*_i$ is short for the approximation of $y(x)$ at $x_i$
 
 - $h = (x_ni - x_i)$
-- $f$ represents the function of velocity or the derivative of change at the previous point. #todo[je to jasno?]
+- $f$ represents the function of velocity or the derivative of change at the previous point. 
 
 
 It is important that the step taken is over a short period of time, as having bigger steps can create a different result.
@@ -203,7 +203,7 @@ By using larger steps, each value down the line can be less accurate.
 
 
 
-=== Similarities between Euler and the Taylor series #todo[vredu naslov?]<euler_v_taylor>
+=== Similarities between Euler and the Taylor series<euler_v_taylor>
 Let us assume that the solution $y(x)$ exists to the Cauchy problem talked about in @cauchy, and it can be written as a Taylor series at the point $x = x_i+1$.
 Then taking the Taylor series
 $
@@ -283,7 +283,6 @@ Graphical representation of the algorithm can be seen in @rk4.
 Red points represent each of the increments and their values as a vector, while the green point is the step value approximation.
 Blue line represents the $y$ function; the solution to the problem.
 
-#todo[ali je jasno ali malo ramblam?]
 
 #import "/src/figures/mod.typ": compare_e_v_rk,compare_e_v_rk_table
 #let number_of_steps = 10
@@ -304,8 +303,6 @@ The power of the Runge-Kutta method comes is its improved accuracy over the Eule
 
 
 In practice the Runge-Kutta algorithm is used if only a few $y$ values are needed that need high accuracy. This can happen in cases where a few $y$-values are needed to start the process in more sophisticated algorithms @dreyer_2017[p. 116].
-
-#todo[ je tabela vredu ali naj bom bolj konzervativen z barvam?]
 
 #figure(
   caption: [Table of Runge-Kutta approximation in  comparison to Euler approximations and their errors relative to the solution to the problem $(d y)/(d x) = y - x$],
@@ -361,20 +358,23 @@ Reflection of $p_h$ is denoted by $p^*$, and its coordinates are defined by the 
 $
 p^* = (1 + alpha)overline(p) - alpha p_h
 $
-where $alpha$ is a positive constant, named the _reflection coefficent_ @nelder_1965.
+where $alpha$ is a positive constant, named the _reflection coefficient_ @nelder_1965.
+
+Similarly we define _expansion_ of $p^*$ as
+$
+p^(**) = gamma p^* + (1 - gamma )overline(p)
+$
+where $gamma$ becomes the _expansion coefficient_.
+If $gamma$ is replaced by $beta$ then _expansion_ becomes _contraction_ and $beta$ becomes the _contraction coefficient_, where its value lies between 0 and 1.
 
 
+The Nelder-Mead method uses these operations in its algorithm following the graph in @nedelmead-alg.
 
-#todo[how it works]
+
 
 
 #import "/src/figures/mod.typ": nedel_graph
 #figure(
   caption: [visualization of the algorithm as described in @nelder_1965[Fig. 1]],
   scale(nedel_graph,x: 80%, y: 80%)
-)
-
-
-@singer_2009 -> http://var.scholarpedia.org/article/Nelder-Mead_algorithm
-
-@nelder_1965
+)<nedelmead-alg>

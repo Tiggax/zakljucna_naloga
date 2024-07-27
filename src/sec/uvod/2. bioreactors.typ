@@ -7,7 +7,6 @@
 
 A bioreactor is typically described as an apparatus containing a chamber in which organisms such as bacteria or yeast are grown.
 The purpose of it is the production of biomolecular metabolites or biopolymers or conversion of organic wastes @mandenius_2016[p. 8].
-
 Even if the first impression the bioreactor gives is something mundane, they represent vital components in biotechnological processes, particularly in modern pharmaceutical production. 
 
 They are instruments or systems engineered to provide an optimal environment wherein biological reactions can catalyze, facilitating the growth of cells, tissues, or microbial cultures. 
@@ -28,21 +27,19 @@ These were first used for production of explosives, and later rubber manufacture
 
 
 
-#todo[add more text]
-
-
-The basic parameters for biotechnological processes, like temperature, pH value, dissolved oxygen, etc., are measured and controlled by standard devices implemented in every commercial stirred tank @Kretzmer_2002[p. 138]. 
-
-
+The basic parameters for biotechnological processes, like temperature, pH value, dissolved oxygen, etc., are measured and controlled by standard devices implemented in every commercial stirred tank @Kretzmer_2002[p. 138]. These provide information about the values in the bioreactor at each taken measurement.
 
 == Types
 
+Bioreactors can be classified into many different types.
+They differ in their operation, process time, use and functionality.
 
 
 
 === Batch
 
 Batch bioreactors derive their name from the way the product is made in batches. The process starts with inoculation of the 
+
 
 #figure(
   caption: [A simple model of a bioreactor],
@@ -57,10 +54,12 @@ Batch bioreactors derive their name from the way the product is made in batches.
 For optimal mixing, various types of impellers are available as well as standard sampling probes for monitoring the environment and the cells during the process. 
 A disadvantage of the stirred tank reactor compared to the small-scale reactors is the oxygen supply @Kretzmer_2002[p. 138]. 
 
-#todo[TODO]
+
 
 === Fed-batch
-#todo[TODO]
+
+
+
 
 == Bioreactors using CHO Cells
 
@@ -69,9 +68,6 @@ This was achieved by Ross Harrison by managing to grow nerve cells utilizing the
 The cells were grown over a period of 30 days which showed the possibility of growing cells in vitro.
 This is why many regard year 1907 as the beginning of cell cultivation
 @Kretzmer_2002[p. 135].
-
-
-This paved
 
 
 The biggest leap forward towards large scale cultivation of  animal cells was achieved by Earle and Eagle. 
@@ -96,6 +92,8 @@ By the early 1980s, recombinant proteins started to be introduced to the pharmac
 
 
 @CHO cell lines are among the most extensively utilized hosts for the production of therapeutic proteins in the bio-pharmaceutic industry @Wurm_2004.
+Nearly 80% of the approved human therapeutic antibodies are produced by @CHO cells @Xu_Lin_Mi_Pang_Wang_2023.
+They provide an advantage over other non-eucaryotic cell lines, since they are able to achieve correct glycosylation patterns of mammalian-cells, needed for protein therapeutics such as therapeutic antibodies @Cui_2023[p. 1].
 Their use in stirred tank bioreactors are preferred because of their scalability with these cells @Kretzmer_2002[p. 138].
 Currently, stirred tank bioreactors over 10,000 L scale are readily used for SF suspension cultures of recombinant CHO (@rCHO) cells producing therapeutic antibody @Kim_2012[p. 917-918].
 
