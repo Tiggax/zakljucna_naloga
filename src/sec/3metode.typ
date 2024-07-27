@@ -232,4 +232,4 @@ This was used to ease the injection of data, the system values and to be able to
 #figure(
   caption: [Image of the application interface],
   image("/figures/bion-app.png")
-)
+)<bion-app>

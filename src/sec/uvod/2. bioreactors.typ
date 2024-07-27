@@ -34,11 +34,17 @@ The basic parameters for biotechnological processes, like temperature, pH value,
 Bioreactors can be classified into many different types.
 They differ in their operation, process time, use and functionality.
 
-
-
 === Batch
 
-Batch bioreactors derive their name from the way the product is made in batches. The process starts with inoculation of the 
+The most basic  and oldest of the bioreactor types is the batch bioreactor.
+Batch bioreactors derive their name from the way the product is made in batches.
+Bioreactor is prepared with a substrate, and then the process starts with inoculation of the organism.
+The process is then monitored until the desired product concentration is achieved.
+It is then harvested and process can be restarted with a new batch.
+The most typical example of batch bioreactor process is beer brewing.
+
+
+
 
 
 #figure(
