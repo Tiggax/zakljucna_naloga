@@ -5,7 +5,7 @@ library(readr)
 library(scales)
 
 
-figure <- "glutamin"
+figure <- "glutamine"
 vals = c("vcd", "glucose", "glutamin", "oxygen","DO", "c_O2", "volume", "product")
 labels = c("VCD", "glucose", "glutamin", "PID[02]","DO", "c_O2", "volume", "product")
 

@@ -10,12 +10,12 @@ vals = c("vcd", "glucose", "glutamin", "oxygen","DO", "c_O2", "volume", "product
 labels = c("VCD", "glucose", "glutamin", "PID[02]","DO", "c_O2", "volume", "product")
 
 
-max1 <- read.csv(paste(sep = "", "data/",figure, "1.csv")) %>% 
-  mutate(mu_max = "0.001")
+max1 <- read.csv(paste(sep = "", "data/",figure, "4.csv")) %>% 
+  mutate(mu_max = "0.0004")
 max2 <- read.csv("data/default.csv") %>% 
-  mutate(mu_max = "0.002")
-max3 <- read.csv(paste(sep = "", "data/",figure, "3.csv")) %>% 
-  mutate(mu_max = "0.003") 
+  mutate(mu_max = "0.0005")
+max3 <- read.csv(paste(sep = "", "data/",figure, "6.csv")) %>% 
+  mutate(mu_max = "0.0006") 
 
 data <- rbind(max1, max2, max3) %>% 
   select(!c_O2)
