@@ -60,7 +60,7 @@ Limitni primeri
 
 #show: checklist
 
-- [ ] Zahvala
+- [x] Zahvala
 - [ ] KDI
   - [ ] imena
   - [ ] ključne besede
@@ -96,3 +96,17 @@ Limitni primeri
 
 
 
+== Z andrejem za čez it 
+
+- PID Control
+  - integral del kako
+- Volumni
+  - če večji feed rate potem PID več delat? ali manj? lahko da raztaplja lažje v več volumna
+  - produkt `c` bi mogla bit manjša če 
+
+
+idealni model
+
+
+
+temp shift vpliva na producijo produta, naredij ga več

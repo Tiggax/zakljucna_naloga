@@ -129,7 +129,7 @@
 
     Determine $h$, calculate $overline(p)$
 
-    Form $P = (1 + alpha)overline(p) - alpha p_h$
+    Form $p = (1 + alpha)overline(p) - alpha p_h$
 
     Calculate $y$
   ]],

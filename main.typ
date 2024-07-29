@@ -8,7 +8,7 @@
 
 // - - - - - Add to template - - - - - 
 #set outline(fill: repeat[.#h(8pt)], indent: 2em)
-
+#show heading.where(level: 2): it => upper(text(weight: "regular", it))
 // - - - - - - - - - - - - - - - - - -
 
 #show: project.with(
@@ -22,7 +22,7 @@
 
 	kratice: meta.kratice,
 
-	priloge: (), // you can add attachments as a dict of a title and content like `"name": [content],`
+	priloge: ("Links and description of Git repositories containing the app and the workflow": ab.git), // you can add attachments as a dict of a title and content like `"name": [content],`
 
 	zahvala: ab.zahvala,
 
@@ -41,7 +41,6 @@
 // - - - - - Add to template - - - - - 
 #show heading.where(level: 1):it => {pagebreak(weak: true);it}
 #show heading: set block(spacing: 2em)
-#show heading.where(level: 3):it => text(weight: "regular", it)
 
 #set text(hyphenate: false)
 #set math.equation(numbering: "(1)")
