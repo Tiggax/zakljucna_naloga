@@ -70,6 +70,7 @@ let target = "/data/simple_fit"
   )
 }
 
+#let cnt = 0
 
 #let results(target) = {
   return (plot: get_plot(target), const_table: get_table(target))
@@ -77,19 +78,43 @@ let target = "/data/simple_fit"
 
 
 #let line(key, val, depth) ={
+  
+  let t = "min"
   let vals = (
-    mu_max: $v^2$,
+    mu_max: $"MVC"/("ml" #t)$,
+    power_input: $W / m^3$,
+    ks_glucose: $g/L$,
+    ks_glutamine: $g/L$,
+    
+    n_vcd: none,
     day: $"day"$,
+    product: $(m g)/("MVC" #t)$,
+    k_glucose: $"MVC"/#t$,
+    k_glutamine: $"MVC"/#t$,
+    kP: none,
+    kDO: $"mol"/ L$,
+    cell_metabolism: $"mol"/("cell" #t)$,
+    air_flow: $L / #t$,
+    henry: $"mol" / ("bar" L)$,
+    minimum: $%$,
+    fi_oxygen_max: $L / #t$,
+    max_flow: $L / #t$,
     volume: $L$,
-    vcd: $"million" "cells" / (m L)$,
-    oxigen_part: $%$
+    vcd: [$(M V C) / (m L)$ #footnote[Million Viable Cells per mL]],
+    glucose: $g/L$,
+    glutamine: $g/L$,
+    oxygen_part: $%$,
+    start: $d a y$,
+    rate: [$(%"IWV")/"day"$ #footnote[% Initial Working Volume per day]],
   )
+  
   if type(val) == float {
-    (
+    ((
       table.cell(key.replace("_", " "),fill: aqua.transparentize(80%)),
       table.cell([#val], colspan: depth - 1, align: right ),
-      table.cell(vals.at(key,default: [TODO: add unit]))
-    )
+      table.cell(vals.at(key,default: [TODO: add unit]), inset: .6em)
+      
+    ),)
   } else {
     let height = val.values().map(x => if type(x) == float {1} else {x.len()}).sum()
 
@@ -106,6 +131,7 @@ let target = "/data/simple_fit"
 #let constants(name) = {
 
   let values = json("/data/" + name + ".json")
+
   let a = for ((k,v)) in values {
     line(k,v,4)
   }

@@ -137,10 +137,11 @@ The advantage of CHO and NSO cells is that there are well-characterised platform
 
 
 The most successful strategies involve feeding concentrates of nutrients based upon the predicted requirements of the cells for growth and production. 
-This can involve slow feeding of low concentrations of key nutrients. The maintenance of low concentration set points of the major carbon substrates enables a more efficient primary metabolism with leads to lower rates of production of metabolic by-products, such as ammonia and lactate.
+This can involve slow feeding of low concentrations of key nutrients. 
+#done[The maintenance of low concentration set points of the major carbon substrates enables a more efficient primary metabolism with leads to lower rates of production of metabolic by-products, such as ammonia and lactate.
 
 As a result the cells remain in a productive state over extended time frames. 
-The strategic use of fed-batch cultures has enabled considerable enhancement of yields from these processes. 
+*The strategic use of fed-batch cultures has enabled considerable enhancement of yields from these processes. *]
 This is often combined with a biphasic strategy of production in which cell proliferation is allowed in the first phase so that high cell densities accumulate, followed by a phase in which cell division is arrested to allow cells to attain a high specific productivity.
 
 
@@ -233,7 +234,7 @@ Depending on the product requirements there are two possibilities: keeping the s
 
 === BATCH REACTOR
 
-Antibodies for research and some diagnostic applications may be produced in the small-scale reactors described above. 
+#done[Antibodies for research and some diagnostic applications may be produced in the small-scale reactors described above. ]
 Antibody doses for some therapeutic applications can range from 0.5 to more than 5 mg/kg and this can translate into a requirement for tens to hundreds of kilograms per year. 
 Large scale (tens of grams upwards) needs systems with the potential for scale up.
 
@@ -246,10 +247,10 @@ The ideal reactor for optimal growth and/or production provides a homogenous env
 #done[
   The basic parameters for biotechnological processes, like temperature, pH value, dissolved oxygen, etc., are measured and controlled by standard devices implemented in every commercial stirred tank. 
 ]
-#done[
-  For optimal mixing, various types of impellers are available as well as standard sampling probes for monitoring the environment and the cells during the process. 
-  A disadvantage of the stirred tank reactor compared to the small-scale reactors is the oxygen supply. 
-]
+
+#done[For optimal mixing, various types of impellers are available as well as standard sampling probes for monitoring the environment and the cells during the process. ]
+A disadvantage of the stirred tank reactor compared to the small-scale reactors is the oxygen supply. 
+
 At small-scale, the ratio of surface area to culture volume is high enough to maintain the oxygen level in the supernatant. Using a stirred-tank reactor, this ratio is negligible with respect to aeration. 
 Devices such as spargers, baffles and low shear impellers, have been developed to supply oxygen to cultures in stirred-tank reactors.
 @Kretzmer_2002[p. 138]
@@ -264,8 +265,8 @@ Therefore, the scale-up of this system is limited to bioreactors of about 500 l 
 
 
 However, problems and challenges still remain for the optimisation of this kind of process. 
-The nature of a batch process generates a gradient of nutrients during the run. 
-This leads not only to a depletion of the nutrients, and therefore a drop in viability and death of the cells, but also to a steady increase in toxic metabolites.
+#done[The nature of a batch process generates a gradient of nutrients during the run. 
+This leads not only to a depletion of the nutrients, and therefore a drop in viability and death of the cells, but also to a steady increase in toxic metabolites.]
 
 
 Cell density and culture life-span can be increased by systematic modification of the culture medium with addition of the most important nutrients to keep the level constant. 

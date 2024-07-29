@@ -302,7 +302,7 @@ The power of the Runge-Kutta method comes is its improved accuracy over the Eule
 
 
 
-In practice the Runge-Kutta algorithm is used if only a few $y$ values are needed that need high accuracy. This can happen in cases where a few $y$-values are needed to start the process in more sophisticated algorithms @dreyer_2017[p. 116].
+In practice the Runge-Kutta algorithm is used if only a few points are needed, that need high accuracy. This can happen in cases where a few $y$-values are needed to start the process in more sophisticated algorithms @dreyer_2017[p. 116].
 
 #figure(
   caption: [Table of Runge-Kutta approximation in  comparison to Euler approximations and their errors relative to the solution to the problem $(d y)/(d x) = y - x$],

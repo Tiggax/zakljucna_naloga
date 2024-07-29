@@ -4,13 +4,16 @@
 #import "@preview/oxifmt:0.2.1": strfmt
 
 
+In order to model the bioreactor a system of @ODE was created.
+An application (discussed further in @app-sec) was built for calculations of the system of @ODE used to model the bioreactor.
 
-= Dummy data of a bioreactor process
+= Data of a bioreactor process
 
-
+Data for bioreactor model fitting was randomly generated from data points in approximate industrial bioreactor processes.
+The Dataset can be seen in @data_figure.
 
 #figure(
-  caption: [dummy data, consisting of different values, and points of no known data.],
+  caption: [data, consisting of different values, and points of no known data.],
   table(
     columns: 6,
     fill: (x,y) => if y == 0 {color.mix(teal, white)
@@ -22,21 +25,6 @@
     
   )
 )<data_figure>
-
-
-
-
-
-#todo[
-  kaj se je delalo, kako, kateri parametri, kateri programi, i.t.d.
-]
-
-In order to model the bioreactor a system of @ODE was created.
-An application (discussed further in @app-sec) was built for calculations of the system of @ODE used to model the bioreactor.
-
-
-
-
 
 
 = The System of ordinary differential equations
@@ -65,89 +53,52 @@ In the model the value is calculated with
 $
 #d("VCD") = mu dot n_"VCD" dot "VCD"
 $
-$n_"VCD"$ is a temperature growth constant.
+$n_"VCD"$ is a production phase growth constant.
 This constant changes on the day that the Temperature shift occurs.
 $mu$ is calculated with
 $
-mu = mu_"max" * (c_"gluc" / ("ks"_"gluc" + c_"gluc")) * (c_"glut" / ("ks"_"glut" + c_"glut")) * (c_"O2" / ("ks"_"O2" + c_"O2"))
+mu = mu_"max" * (c_"gluc" / ("Ks"_"gluc" + c_"gluc")) * (c_"glut" / ("Ks"_"glut" + c_"glut")) * (c_"O2" / ("Ks"_"O2" + c_"O2"))
 $
 where $mu_"max"$ is a constant that varies from different strand of @CHO cells.
 This constant is then multiplied with each of the dependant variables using Monod kinetics talked about in @monod_sec. 
 
 == Glucose and glutamin
 
-#let cgk = $k$
+#let cgk = $c$
 
 Glucose and glutamine follow simple negative value dependant on 
 
 $
-#d(cgk) = - k_#cgk * "VCD" * (#cgk / ( "ks"_#cgk + #cgk))
+#d(cgk) = - k_#cgk * "VCD" * (#cgk / ( "Ks"_#cgk + #cgk))
 $
 
-where $#cgk$ is the concentration of the substance, and $k_#cgk$ is the #todo[depletion?] constant.
-
-
-
-
-
-#todo[
-  napiš:
-  - enačbe
-    - in masne bilance
-  - v uvod teorijo za vsakega od teh
-    - numerične metode
-    - metode končnih razlik
-    - reševanje sistemov ODE
-    - teorija LSODA, RK45
-    - cho celice
-    - bioreaktor
-]
-
-Vrednosti:
-
-- koncentracije $"mol"/L$
-- biomasa
-  - VCD ~= TCD
-  - viability =+ 90% -> model assumptions
-- feed rate
-  - $L/"min"$
-- volume
-  - $L$
-- kinetične konstante:
-  - na število celic
-
+where $#cgk$ is the concentration of the substance, and $k_#cgk$ is the depletion constant, while the $"Ks"_#cgk$ is the half-saturation constant.
 
 == Oxygen
 
+For oxygen control a theoretical controller similar to one written about in @pid_sec was used.
+For control only the proportional part was used.
+The model is one dimensional and describes an ideally mixed fed-batch bioreactor, which means that the response of the regulation is fast and the proportional part of the @PID regulator is sufficient of efficient regulation.
+
 #let x = $c_(O_2)$
 
+#todo[ henry odvisen od temperatire, vendar zamerljivo veliko]
+#todo[ pre h = 1.55 post h = 1.6]
 
+vann't hoff enačba za henry
 
-#figure(
-  table(
-    columns: 2,
-    [Vrednosti],[pomen],
-    $Phi_"vph"$,[pretok vpihavanja z zrakom],
-    $Phi_"pure"$,[pretok vpihavanja s čistim kisikom],
-    $Phi_"total"$,[pretok čistega kisika],
-  ),
-  caption: [Given model values]
-)
 
 
 $
-"OUR" = n_"vcd" × 1.9444exp-10 × 60 [ "mol" / ("cel" × "min")]
+"OUR"#footnote[Oxygen Uptake Rate] = c_"vcd" * V * k_m
 $
+where $c_"vcd"$ is the density of Viable cells
+
 
 $
-Phi_"pure" = cases(
-  cases(
-    ("mv" × Phi_(O_2)_"max") / 1000\; Phi_"pure" < Phi_"flow"_"max",
-    Phi_"flow"_"max"\; Phi_"pure" >= Phi_"flow"_"max"
-  )\; "DO"_"error" > 0,
-  0\; "DO"_"error" <= 0
-)
+"OTR"#footnote[Oxygen Transfer Rate] = "kLa" * (c_(O_2)^* - c_(O_2))
 $
+where $c_(O_2)^*$ is the equilibrium oxygen concentration and $c_(O_2)$ is the current oxygen concentration.
 
 $
 Phi_(O_2) = Phi_"vpihavanje" × 0.21 + Phi_"pure"\
@@ -205,7 +156,7 @@ The system was defined with constants seen in @constants. It should be assumed, 
 
 
 The application was built in the Rust programing language and built using community packages seen in @deps. 
-@UI was implemented using the `egui` library, while the solutions to @ODE were computed using a modified version of `ode_solvers` package.
+@ODE were computed using a modified version of `ode_solvers` package.
 The package changed the provided `y` values of each iteration to become mutable, meaning the values of any current step could be modified.
 This was made so that the @PID controller values could reflect the current output of each step.
 Dependencies `serde`, `serde_json` and `csv` were used for data serialization.
@@ -227,7 +178,20 @@ This was used to ease the injection of data, the system values and to be able to
   )
 )<deps>
 
+@UI was implemented using the `egui` library, separating the space into two parts as seen in @bion-app.
+Left pane was used to control the model, while the right side showed a graph of the individual values over the period of the process.
+Each of the values could be individually inspected to see their change of values, and the graph could be zoomed in to see changes in detail.
+Left pane contained four sections.
+The general settings, where the model could be reset, loaded from a `json`, or loaded to the previous instance.
+The simulation parameters, where all of the parameters of the system could be modified to manually tweak the system.
+Data control section where data points for fitting could be loaded in using a `csv` file or cleared.
+This section also included a button to save the result of the system exported as a `csv` file, with a `json` file with the same name generating alongside with the state of the system.
 
+Finally the minimization section contained two sub-sections.
+First section named the minimization target offered a selection of the target value to be minimized, with choices being $mu_"max"$, `n_vcd`, feed rate, PID control oxygen absorption constant (`constants.oxygen`), and constants of product, glutamine and glucose.
+Second section contained selection of which data to use as minimization evaluation.
+The first option `Mixed` used all point nodes of the data, to try to fit the system optimally, while using only one of the other options minimized the system using only the nodes of that values.
+Finally the button "Minimize" ran the minimization process with the system values.
 
 #figure(
   caption: [Image of the application interface],

@@ -5,8 +5,6 @@
 
 
 == Mass balance
-#rect(
-$"accumulation" = "in" - "out"$)
 
 Mass balance is a fundamental principle in bioreactor modeling.
 It is used to describe flow of mass into, within and out of a bioreactor.
@@ -89,7 +87,7 @@ This can graphically be seen in @monod_half.
   monod_function(k: k, mu_max: mu_max)
 )<monod_half>
 
-== Process control
+== Process control<pid_sec>
 
 Process control of the bioreactor is achieved using many systems that utilize the feedback loop to achieve system stability. 
 

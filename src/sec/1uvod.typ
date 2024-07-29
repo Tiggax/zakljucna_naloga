@@ -24,8 +24,4 @@
 
 #include "uvod/4. bioreactor modeling.typ"
 
-== Model
-
-#include "uvod/5. model.typ"
-
 
