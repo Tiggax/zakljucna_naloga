@@ -7,7 +7,6 @@
 
 A bioreactor is typically described as an apparatus containing a chamber in which organisms such as bacteria or yeast are grown.
 The purpose of it is the production of biomolecular metabolites or biopolymers or conversion of organic wastes @mandenius_2016[p. 8].
-
 Even if the first impression the bioreactor gives is something mundane, they represent vital components in biotechnological processes, particularly in modern pharmaceutical production. 
 
 They are instruments or systems engineered to provide an optimal environment wherein biological reactions can catalyze, facilitating the growth of cells, tissues, or microbial cultures. 
@@ -28,39 +27,74 @@ These were first used for production of explosives, and later rubber manufacture
 
 
 
-#todo[add more text]
-
-
-The basic parameters for biotechnological processes, like temperature, pH value, dissolved oxygen, etc., are measured and controlled by standard devices implemented in every commercial stirred tank @Kretzmer_2002[p. 138]. 
-
-
+The basic parameters for biotechnological processes, like temperature, pH value, dissolved oxygen, etc., are measured and controlled by standard devices implemented in every commercial stirred tank @Kretzmer_2002[p. 138]. These provide information about the values in the bioreactor at each taken measurement.
+In a bioreactor these measurements are divided into three groups:
+- _physical_ such as temperature, pressure, flow, etc.
+- _chemical_ such as pH or concentrations of $O_2$ or $C O_2$
+- _biological_ such as biomass, enzyme activity, consumption of substrate and so on.
+All of these measurements can be divided into one of two groups based on how the measurement is taken.
+_Online_ measurements are measured on the bioreactor, and can be monitored in real time, while _offline_ measurements need to be measured by taking a sample of a bioreactor process.
 
 == Types
 
 
+Bioreactors can be classified into many different types.
+They differ in their operation, process time, use and functionality.
+Among them suspension bioreactors are the most used by far.
+They are easier to operate and can scale much larger.
+Their importance can be demonstrated by the annual sales volume of over 250 billion dollars @Meyer_Schmidhalter_2014.
 
+Bioreactors are grouped into three groups by their scale.
+The smallest among the three are the _laboratory_ bioreactors.
+These range up to 5 L, and are mainly used for revitalization an cell growth.
+_Pilot_ bioreactors range up to 200 L in size, and can be meant either for  inoculum growth or as semi-industrial meant for process optimization or reactor testing.
+Lastly the largest bioreactors are _industrial_, with their size ranging up to 100 000 L.
+As the name suggests, they are meant for industrial production.
+
+During the biotechnological process, stirring of the bioreactor is of vital importance.
+Stirring ensures that nutrients, cells, substrate and other substances are uniformly distributed throughout the bioreactor.
+This can be achieved by using a mechanical mixer, aeration of the bioreactor, using a circulation pump or a combination of these.
+For mechanical stirring various types of impellers are available @Kretzmer_2002[p. 138].
+
+Aeration of the bioreactor is also important for maintaining the oxygen level needed for many aerobic organisms to survive, eucaryotic cells being one of them.
+This process also helps with stripping of waste gasses such as $C O_2$ that can saturate in the medium, and potentially kill the organisms.
+
+On the basis of mode of operation, a bioreactor may be classified as batch, fed batch or continuous (e.g. a continuous stirred-tank reactor model). 
 
 === Batch
 
-Batch bioreactors derive their name from the way the product is made in batches. The process starts with inoculation of the 
+The most basic  and oldest of the bioreactor types is the batch bioreactor.
+Batch bioreactors derive their name from the way the product is made in batches.
+Bioreactor is prepared with a substrate, and then the process starts with inoculation of the organism.
+The process is then monitored until the desired product concentration is achieved.
+It is then harvested and process can be restarted with a new batch.
+A simple sketch of a batch bioreactor can be seen in @batch.
 
 #figure(
   caption: [A simple model of a bioreactor],
   reactor
-)
+)<batch>
+
+The most typical example of batch bioreactor process is beer brewing, one of the oldest biotechnological processes.
+In biopharmaceuticals these bioreactors can be used for production of small scale antibodies for research and diagnostic application, but @Kretzmer_2002[p. 138].
+
+The problem with batch bioreactors is their nutrients deplete during the run, which not only results in a drop of viability and death of cells, but also contributes to a steady increase of toxic metabolites.
+Ultimately batch reactors result in toxication of the process, since toxic metabolites are not removed @Kretzmer_2002[p. 139].
+
+=== Fed-batch
+
+Fed-batch bioreactors differ in that they are "fed" during the process.
+The reactor receives a steady supply of substrate during the duration of the process as can be seen in @fed-batch.
+This can prevent the culture from crashing from the lack of nutrients, and helps to encourage the production of primary metabolites.
+This can be seen in a extension of the stationary faze of cell growth and helps delay the dying phase of cells.
+
+By maintaining low concentration set points of major carbon substrates, a more efficient primary metabolism production can be achieved, with lower rates of metabolic by-products. This results in the cells remaining in a productive state over an extended time, which has enabled considerable enhancement of yields from these processes @Butler_2005[p. 285].
+
 
 #figure(
   caption: [A simple model of a bioreactor],
   batch_reactor
-)
-
-For optimal mixing, various types of impellers are available as well as standard sampling probes for monitoring the environment and the cells during the process. 
-A disadvantage of the stirred tank reactor compared to the small-scale reactors is the oxygen supply @Kretzmer_2002[p. 138]. 
-
-#todo[TODO]
-
-=== Fed-batch
-#todo[TODO]
+)<fed-batch>
 
 == Bioreactors using CHO Cells
 
@@ -69,9 +103,6 @@ This was achieved by Ross Harrison by managing to grow nerve cells utilizing the
 The cells were grown over a period of 30 days which showed the possibility of growing cells in vitro.
 This is why many regard year 1907 as the beginning of cell cultivation
 @Kretzmer_2002[p. 135].
-
-
-This paved
 
 
 The biggest leap forward towards large scale cultivation of  animal cells was achieved by Earle and Eagle. 
@@ -96,6 +127,8 @@ By the early 1980s, recombinant proteins started to be introduced to the pharmac
 
 
 @CHO cell lines are among the most extensively utilized hosts for the production of therapeutic proteins in the bio-pharmaceutic industry @Wurm_2004.
+Nearly 80% of the approved human therapeutic antibodies are produced by @CHO cells @Xu_Lin_Mi_Pang_Wang_2023.
+They provide an advantage over other non-eucaryotic cell lines, since they are able to achieve correct glycosylation patterns of mammalian-cells, needed for protein therapeutics such as therapeutic antibodies @Cui_2023[p. 1].
 Their use in stirred tank bioreactors are preferred because of their scalability with these cells @Kretzmer_2002[p. 138].
 Currently, stirred tank bioreactors over 10,000 L scale are readily used for SF suspension cultures of recombinant CHO (@rCHO) cells producing therapeutic antibody @Kim_2012[p. 917-918].
 
@@ -116,7 +149,7 @@ They weigh between 30 and 45 grams.
 They are closely related with the Chinese striped hamster (_Cricetulus barabensis_) and are taxonomically unsettled. Some authorities consider them as a separate species, while some classify them as subspecies.
 In that case the Latin name of the Chinese hamster becomes _Cricetulus barabensis griseus_, and the Chinese striped hamster becomes _Cricetulus barabensis barabensis_.
 
-==== History of the Chinese hamster in research
+=== History of the Chinese hamster in research
 
 Chinese hamsters were first successfully used as laboratory specimens in the early 20th century in place of mice. 
 First such report was posted by Hsieh in 1919 report: "A new laboratory animal (Cricetulus griseus)". 
@@ -156,7 +189,7 @@ Schwentker never published or shared his breeding techniques, but by 1954, Georg
 With funds from the National Cancer Institute, he established a breeding center and began distributing hamsters to scientific colleagues.
 He became the sole supplier of  Chinese hamsters to biomedical research institutions for the next decade in the United States @lsf_2015. 
 
-==== CHO cell lines
+=== CHO cell lines
 
 The developments of the 1970s – fusion of cells to form hybridomas, and genetic engineering – triggered a second wave of products. Monoclonal antibodies and recombinant proteins for diagnosis and therapy set new challenges for the inventors @Kretzmer_2002[p. 135].
 Looking at today, there has been a rapid increase in the number and demand for approved bio-pharmaceuticals produced from animal cell culture processes.
