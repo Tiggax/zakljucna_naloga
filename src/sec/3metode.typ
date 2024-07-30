@@ -44,11 +44,11 @@ The value `Time` was expressed in a 64 bit float,  and the `State` was an `SVect
   code(snippet, lines: (236,236), )
 )<trait>
 
-== Viable Cell density
+== Viable Cell density<vcd-sec>
 
 Viable cell density or @VCD, expresses the number of viable cells in the reactor.
 It is expressed as $10^6 "Cell/mL"$ where the only living cells are counted.
-The model assumes that viability is 90%, this meaning that 90% of cells in the bioreactor are alive at every increment.
+The model assumes that viability is 100%, this meaning that 100% of cells in the bioreactor are alive at every increment.
 In the model the value is calculated with
 $
 #d("VCD") = mu dot n_"VCD" dot "VCD"
