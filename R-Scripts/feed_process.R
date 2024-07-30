@@ -37,7 +37,7 @@ lvl_labels <- c("VCD\n[MVC]","glucose\n[g]", "glutamine\n[g]", "product\n[g]")
 
 data %>% 
   filter( minutes == max(data["minutes"])) %>% 
-  mutate(vcd = vcd * 0.001 * volume, glutamin = glutamin * volume, glucose = glucose * volume, product = product * volume ) %>% 
+  mutate(vcd = vcd * 10^-3 * volume, glutamin = glutamin * volume, glucose = glucose * volume, product = product * volume ) %>% 
   select(vcd, glutamin, glucose, product, feed_rate) %>% 
   pivot_longer(!feed_rate, values_to = "Value", names_to = "type") %>% 
   mutate( type = factor(type, levels = lvls, labels = lvl_labels)) %>% 
