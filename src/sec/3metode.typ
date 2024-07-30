@@ -47,7 +47,7 @@ The value `Time` was expressed in a 64 bit float,  and the `State` was an `SVect
 == Viable Cell density<vcd-sec>
 
 Viable cell density or @VCD, expresses the number of viable cells in the reactor.
-It is expressed as $10^6 "Cell/mL"$ where the only living cells are counted.
+It is expressed as $10^6 "Cell/mL"$ ($"MVC"/(m L)$) where the only living cells are counted.
 The model assumes that viability is 100%, this meaning that 100% of cells in the bioreactor are alive at every increment.
 In the model the value is calculated with
 $
@@ -199,4 +199,3 @@ Finally the button "Minimize" ran the minimization process with the system value
   caption: [Image of the application interface],
   image("/figures/bion-app.png")
 )<bion-app>
-#todo[update app image]
