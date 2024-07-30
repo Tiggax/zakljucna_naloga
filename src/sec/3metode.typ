@@ -41,7 +41,7 @@ The value `Time` was expressed in a 64 bit float,  and the `State` was an `SVect
 #figure(
   caption: [Trait implementation for the system],
   kind: image,
-  code(snippet, lines: (236,236), )
+  code(snippet, lines: (238,238), )
 )<trait>
 
 == Viable Cell density<vcd-sec>
@@ -74,6 +74,15 @@ $
 
 where $#cgk$ is the concentration of the substance, and $k_#cgk$ is the depletion constant, while the $"Ks"_#cgk$ is the half-saturation constant.
 
+== Product
+
+Product is a namespace for a unknown _primary metabolite_, that is developed during the bioreactor process.
+
+$
+#d($c_p$) = k_p * "vcd"
+$
+where $k_p$ is a product constant that is changed dependant on the producing product.
+
 == Oxygen
 
 === PID control
@@ -82,64 +91,24 @@ For oxygen control a theoretical controller similar to one written about in @pid
 For control only the proportional part was used.
 The model is one dimensional and describes an ideally mixed fed-batch bioreactor, which means that the response of the regulation is fast and the proportional part of the @PID regulator is sufficient of efficient regulation.
 
-#let x = $c_(O_2)$
+=== Sparger airation
 
-#todo[ henry odvisen od temperatire, vendar zamerljivo veliko]
-#todo[ pre h = 1.55 post h = 1.6]
+The model uses a sparger with a mixer that dilutes the oxygen into the system. While @PID control injects pure oxygen, the sparger airates the system with filtered air (21% oxygen).
 
-vann't hoff enačba za henry
+The air flow from the sparger and the are combined.
+Afterwards $k L a$ is calculated specific to the system using the power input of the system and the combined flow.
 
-
-
-$
-"OUR"#footnote[Oxygen Uptake Rate] = c_"vcd" * V * k_m
-$
-where $c_"vcd"$ is the density of Viable cells
+Next the the ammount of oxygen released into the system is calculated, by using the Henry's conatant.
+Afterwards oxygen transfer rate (@OTR) is calculated from which oxygen uptake rate (@OUR) is substracted to get the oxygen change.
 
 
-$
-"OTR"#footnote[Oxygen Transfer Rate] = "kLa" * (c_(O_2)^* - c_(O_2))
-$
-where $c_(O_2)^*$ is the equilibrium oxygen concentration and $c_(O_2)$ is the current oxygen concentration.
+== Total balance
 
-$
-Phi_(O_2) = Phi_"vpihavanje" × 0.21 + Phi_"pure"\
-Phi_"total" = Phi_"vpihavanje" + Phi_"pure"\
-x(O_2) = Phi_(O_2) / Phi_"total"\
-p_(O_2) = x_(O_2) * 1 "bar"\
-c_(O_2)^* = "He" × p_(O_2)
-$
-
-$
-"OTR" = k_("La") × (c_(O_2)^* - c_(O_2))
-$
+Since the bioreactor model is reciving a steady supply of substrate, total balance of the system needs to be calculated.
+@VCD and product get diluted, while glucose and glutamine can get concentrated given if the concentration of the feed is bigger than the concentration of the biroeactor.
 
 
-$
-#d($#x$) = - "OUR" + "OTR"
-$
-
-== Totalna bilanca
-
-Total bilance gets applied only after  days bigger than `FEED_MIN`.
-and contains:
-
-$
-Phi_% = Phi_V / V
-$
-
-$
-#d($V$) = phi_V
-$
-
-$
-#d("VCD") -=  x_"VCD" times phi_%
-$
-
-$
-#d(cgk) += 
-$
-
+== parameters of the system
 
 The system was defined with constants seen in @constants. It should be assumed, that any omitted values will be as in @constants.
 
