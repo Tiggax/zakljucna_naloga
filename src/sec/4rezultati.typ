@@ -104,12 +104,12 @@ Graphing glucose in @glucose and @glucose-fac and glutamine in @glutamin and @gl
 
 #figure(
   caption: [Graph of glutamine concentration over time based on the changing glutamine constant],
-  image("/figures/glutamin.png")
+  image("/figures/glutamine.png")
 )<glutamin>
 
 #figure(
   caption: [Graph of glutamine concentration over time based on the changing glutamine constant],
-  image("/figures/glutamin-facet.png")
+  image("/figures/glutamine-facet.png")
 )<glutamin-fac>
 
 = Fitting to the Data
