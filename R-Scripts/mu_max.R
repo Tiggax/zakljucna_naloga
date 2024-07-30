@@ -8,11 +8,11 @@ max2 <- read.csv("data/default.csv") %>%
 max3 <- read.csv(paste(sep = "", "data/",figure, "6.csv")) %>% 
   mutate(mu_max = "0.0006") 
 
-data <- rbind(max1, max2, max3) %>% 
+raw_data <- rbind(max1, max2, max3) %>% 
   select(!c_O2)
 
 
-data %>% 
+raw_data %>% 
   ggplot(aes(x = minutes, y = vcd, colour = mu_max)) + 
   geom_line() +
   labs(x = "Days",y = "VCD\n[MVC/mL min]", color = expression(mu["max"])) +
@@ -49,3 +49,7 @@ ggsave(
   width = 15.5,
   units = "cm",
 )
+
+
+
+
