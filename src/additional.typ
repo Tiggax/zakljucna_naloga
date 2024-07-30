@@ -26,17 +26,27 @@
   https://github.com/tiggax/bion
   
   Key contents:
-   - *`src/model.rs`* - implementation of the bioreactor model
-   - *`src/regressor.rs`* - implementation of a reggresion cost function for the model
+  - *`src/model.rs`* - implementation of the bioreactor model
+  - *`src/regressor.rs`* - implementation of a reggresion cost function for the model
 
-   Link to the Github repository of the data:
+  Link to the Github repository of the data:
 
-   https://github.com/tiggax/zakljucna_naloga
+  https://github.com/tiggax/zakljucna_naloga
 
-   Key contents:
+  Key contents:
   - *`podatki`* folder with the test data used for fitting in the thesis
   - *`data`* folder with all of the generated data for the figures. This folder contains all of the data outputs of the results of the different system fits. It also contains `json` files needed to reload the state into the app.
   - *`R-Scripts`* folder with scripts for result generation figures
+
+  Link to the Github repository of the `ode-solvers` library:
+
+  https://github.com/tiggax/ode-solvers
+
+  The branched use was `thesis_fix`
+  
+  Key contents:
+  - *`src/dop_shared.rs`* contains the System trait, needed to be modified for mutable values to work
+  - *`src/rk4.rs`* contains the Runge-Kutta implementation, with two additonal function with `mut_` prepends that were modified for system to work.
 ]
 
 
