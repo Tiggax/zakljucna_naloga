@@ -16,7 +16,7 @@ raw_data <- rbind(max0, max1, max2, max3) %>%
 raw_data %>% 
   ggplot(aes(x = minutes, y = vcd, colour = feed_rate)) + 
   geom_line() +
-  labs(x = "Days", y = "VCD\n[MVC/mL min]", color = "Feed rate") +
+  labs(x = "Days", y = "VCD\n[MVC/mL]", color = "Feed rate") +
   scale_x_continuous(labels = \(x) {
     floor(x / 60 / 24)
   })

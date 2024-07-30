@@ -15,7 +15,7 @@ raw_data <- rbind(max1, max2, max3) %>%
 raw_data %>% 
   ggplot(aes(x = minutes, y = vcd, colour = mu_max)) + 
   geom_line() +
-  labs(x = "Days",y = "VCD\n[MVC/mL min]", color = expression(mu["max"])) +
+  labs(x = "Days",y = "VCD\n[MVC/mL]", color = expression(mu["max"])) +
   scale_x_continuous(labels = \(x) {
     floor(x / 60 / 24)
   })
@@ -29,7 +29,7 @@ ggsave(
 
 # FACET -------------------------------------------------------------------
 
-data <- data %>%
+data <- raw_data %>%
   pivot_longer(!c(minutes, mu_max), names_to = "type", values_to = "val") %>% 
   mutate(type = factor(type, levels = vals, labels = labels))
 
