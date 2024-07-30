@@ -76,6 +76,8 @@ where $#cgk$ is the concentration of the substance, and $k_#cgk$ is the depletio
 
 == Oxygen
 
+=== PID control
+
 For oxygen control a theoretical controller similar to one written about in @pid_sec was used.
 For control only the proportional part was used.
 The model is one dimensional and describes an ideally mixed fed-batch bioreactor, which means that the response of the regulation is fast and the proportional part of the @PID regulator is sufficient of efficient regulation.
@@ -197,3 +199,4 @@ Finally the button "Minimize" ran the minimization process with the system value
   caption: [Image of the application interface],
   image("/figures/bion-app.png")
 )<bion-app>
+#todo[update app image]
