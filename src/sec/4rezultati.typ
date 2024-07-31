@@ -1,6 +1,7 @@
 #import "/src/additional.typ": todo
 #set heading(offset: 1)
 
+#import "/src/figures/mod.typ": constants_diff_fig
 
 = Default system
 
@@ -64,7 +65,7 @@ Bigger consumption also strains the @PID control, as oxygen needs to be pumped i
   image("/figures/mu_max-facet.png")
 )<mu_max-fac>
 
-
+== Feed rate
 
 Changing the feed rate results in the @feed.
 Red line represents a bioreactor with no feed, meaning a normal batch bioreactor.
@@ -79,14 +80,45 @@ This happens, since volume steadily increases, and cells start to get diluted.
 )<feed>
 
 In @feed-fac  we can see feed rate compared to other values.
-Glucose and glutamine are similarly diluted like cell density.
-It can be seen that the concentration of product remains relativly the same for all feed rates.
-
+Glucose and glutamine last longer, as the feed rate adds them in the substrate. The bigger the feed, the more substrate gets added per minute, meaning the volume of substrate in the bioreactor increases.
+In @PID control a small decrease of needed oxygen can be seen, as more oxygen can get dissolved in larger volume.
+The higest concentration of product occurs in the batch boreactor, while bioreactors with feed contain lower concentration.
 
 #figure(
   caption: [Graph of viable cell density over time based on the changing values of feed rate],
   image("/figures/feed-facet.png")
 )<feed-fac>
+
+
+Simulating the bioreactor for bigger feed values, so that at least one of the substrate nutrients does not get depleted was done with constants in @process-const.
+
+#figure(
+  caption: [Different feed rates in @process and @process-fac were built with the following constants differing from the default values in @constants ],
+  constants_diff_fig("feed_process0")
+)<process-const>
+
+The simulation made four runs with different feed rates in each iteration.
+The facet graph of the four runs can be seen in @process-fac.
+With growing feed rate, the @VCD needs more time to reach the capacity of the system, with concentrations of different runs staying in similar ranges.
+As glucose and glutamine are being feed into the system, larger feed rate values, extend the time of cell growth.
+As the values are in concentrations, and the volume is not constant, the values can be deceving.
+Looking at @process, we can see the number of cells and theoretical mass values of each of the nutrients, as well as the wanted product, at the last day of the process.
+It can be seen that increasing the feed rate results in a increase of Viable cells, but somewhere between 10 % and 15 % this corelation starts to die off.
+Looking at glucose and glutamine mass, it can be seen that they follow a similar pattern.
+Similarly the mass of product at the end of the process is the biggest at 10 % feed rate.
+
+#figure(
+  caption: [Facet of the different feed rates ranging from 0% to 15 % in 5 % increments.],
+  image("/figures/feed_process-facet.png")
+)<process-fac>
+
+
+#figure(
+  caption: [Last day cell count and mass of substrate and product for different feed rates ranging from 0% to 15 % with 5 % increments],
+  image("/figures/feed_process.png")
+)<process>
+
+== Glucose and glutamine
 
 Graphing glucose in @glucose and @glucose-fac and glutamine in @glutamin and @glutamin-fac it can be seen, that glucose and glutamine constants mainly affect the consumption of glucose and glutamine, with no major changes in the system.
 
@@ -113,14 +145,19 @@ Graphing glucose in @glucose and @glucose-fac and glutamine in @glutamin and @gl
 
 = Fitting to the Data
 
-The system was approximated manually, to get close to data values , and then used the Nelder-Mead  algorithm to fit the @VCD.
+The system seen in @fit, was fitted to the data values from @data_figure.
+The solution to the system differs from the default system (seen in @constants) with values seen in @fit-const.
+The system was fitted as close as possible by manually adjusting values, and then the `n_vcd` and `mu max` were fitted using the values from @VCD points.
 
-#import "/src/figures/mod.typ": constants_diff_fig
+#figure(
+  caption: [The constants used to simulate the approximate solution],
+  constants_diff_fig("data-fit")
+)<fit-const>
 
-//#figure(
-//  caption: [],
-//  constants_diff_fig("simple_fit")
-//)
+#figure(
+  caption: [facet graph of the system],
+  image("/figures/data-fit.png")
+)<fit>
 
 
 = Suggestions for further work
@@ -131,3 +168,10 @@ The system was approximated manually, to get close to data values , and then use
 #todo[ PID control input ]
 
 #todo[vpliv spremnjanja volumna glede na kLa (koficient snovnega prenosa (kok hit se raztaplja))]
+
+#todo[ henry odvisen od temperatire, vendar zamerljivo veliko]
+#todo[ pre h = 1.55 post h = 1.6]
+
+vann't hoff enačba za henry
+
+#todo[ upoštevanje kisika v feedu]
