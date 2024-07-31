@@ -1,14 +1,5 @@
-library(ggplot2)
-library(tidyr)
-library(dplyr)
-library(readr)
-library(scales)
-
 
 figure <- "vcd"
-vals = c("vcd", "glucose", "glutamin", "oxygen","DO", "c_O2", "volume", "product")
-labels = c("VCD", "glucose", "glutamin", "PID[02]","DO", "c_O2", "volume", "product")
-
 
 max1 <- read.csv(paste(sep = "", "data/",figure, "4.csv")) %>% 
   mutate(initial_vcd = "0.4")
@@ -23,7 +14,7 @@ data <- rbind(max1, max2, max3) %>%
 data %>% 
   ggplot(aes(x = minutes, y = vcd, colour = initial_vcd)) + 
   geom_line() +
-  labs(x = "Days",y = "VCD", color = "Initial VCD") +
+  labs(x = "Days",y = "VCD\n[MVC/mL]", color = "Initial VCD") +
   scale_x_continuous(labels = \(x) {
     floor(x / 60 / 24)
   })
@@ -32,6 +23,8 @@ data %>%
 ggsave(
   paste("figures/", figure, ".png", sep = ""),
   dpi = 320,
+  width = 15.5,
+  units = "cm",
 )
 
 # FACET -------------------------------------------------------------------
@@ -53,5 +46,7 @@ data %>%
 ggsave(
   paste("figures/", figure, "-facet.png", sep = ""),
   dpi = 320,
+  width = 15.5,
+  units = "cm",
 )
 

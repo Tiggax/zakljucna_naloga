@@ -39,3 +39,5 @@ en = ["",", PhD"]
 "VCD" = "Viable cell density"
 "PID" = "proportional integral derivative"
 "DO" = "Dissolved oxygen"
+"OTR" = "oxygen transfer rate"
+"OUR" = "oxygen uptake rate"

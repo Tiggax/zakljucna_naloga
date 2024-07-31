@@ -1,0 +1,40 @@
+{
+  "mu_max": 0.00041401396229968684,
+  "power_input": 20.0,
+  "ks_glucose": 0.05,
+  "ks_glutamine": 0.05,
+  "temp_shift": {
+    "n_vcd": 0.30000000000000004,
+    "day": 6.5
+  },
+  "constants": {
+    "product": 0.0001,
+    "k_glucose": 0.0003,
+    "k_glutamine": 0.00013,
+    "kP": 0.11000000000000001,
+    "kDO": 0.0001
+  },
+  "airation": {
+    "cell_metabolism": 100.0,
+    "air_flow": 0.005,
+    "henry": 0.0016,
+    "pid": {
+      "minimum": 30.0,
+      "fi_oxygen_max": 10.0,
+      "max_flow": 18.0
+    }
+  },
+  "initial": {
+    "volume": 45.0,
+    "vcd": 0.5,
+    "glucose": 7.0,
+    "glutamine": 1.5,
+    "oxygen_part": 80.0
+  },
+  "feeding": {
+    "start": 5.7,
+    "rate": 0.03,
+    "glucose": 10.0,
+    "glutamine": 33.0
+  }
+}

@@ -316,7 +316,7 @@ The Nelder-Mead method also known as simplex search algorithm is an algorithm or
 It is one of the best known algorithms for multidimensional unconstrained optimization without derivatives @singer_2009.
 
 The basic algorithm is popular in many fields of science, for his simplicity and ease of use.
-In the 1970s the algorithm was being included in many major software libraries, and by the 1980s its popularity branded it under many names such as the "amoeba algorithm" @press_1992 and Mathlabs "fminsearch" @schreiber_2007.
+In the 1970s the algorithm was being included in many major software libraries, and by the 1980s its popularity branded it under many names such as the "amoeba algorithm" @press_1992 and MATLAB's "fminsearch" @schreiber_2007.
 
 The popularity of the algorithm prevails till this day, despite the recent advances in direct search method and the age of the algorithm @singer_2009.
 
