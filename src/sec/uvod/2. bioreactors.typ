@@ -204,5 +204,5 @@ Finally, @CHO cells can adapt easily to growth in the regulatory-friendly serum-
 This characteristic is preferred for large-scale culture in bioreactors @Kim_2012[p. 917-918].
 
 Recent advances in cell culture technology for @rCHO cells have achieved significant improvement in protein production leading to titer of more than 10 g/L to meet the huge demand from market needs @Kim_2012[p. 917].
-As such @CHO cells have become the standard mammalian host cells used in the production of recombinant proteins, although there are other options such as the mouse myeloma (NS0), baby hamster kidney (BHK), human embryonic kidney (HEK-293) or human-retina-derived (PER C6) cells. 
+As such @CHO cells have become the standard mammalian host cells used in the production of recombinant proteins, although there are other options such as the mouse myeloma (NS0), baby hamster kidney (@BHK), human embryonic kidney (@HEK[293]) or human-retina-derived (PER C6) cells. 
 All these cell lines have been adapted to grow in suspension culture and are well suited for scale-up in stirred tank bioreactors @Butler_2005[p. 284].

@@ -19,7 +19,7 @@ The Dataset can be seen in @data_figure.
     fill: (x,y) => if y == 0 {color.mix(teal, white)
   },
     table.header(
-      [days], [VCD], [glutamin], [glucose],[$"DO"_50$], [product]
+      [days], [@VCD], [glutamine], [glucose],[$"DO"_50$], [product]
     ),
     ..csv("/podatki/data.csv").slice(1).flatten().map(x => [#strfmt("{:.7}",x)])
     
@@ -62,7 +62,7 @@ $
 where $mu_"max"$ is a constant that varies from different strand of @CHO cells.
 This constant is then multiplied with each of the dependant variables using Monod kinetics talked about in @monod_sec. 
 
-== Glucose and glutamin
+== Glucose and glutamine
 
 #let cgk = $c$
 
@@ -76,7 +76,7 @@ where $#cgk$ is the concentration of the substance, and $k_#cgk$ is the depletio
 
 == Product
 
-Product is a namespace for a unknown _primary metabolite_, that is developed during the bioreactor process.
+Product is a substitute for a unknown _metabolite_, that is developed during the bioreactor process.
 
 $
 #d($c_p$) = k_p * "vcd"
@@ -91,21 +91,21 @@ For oxygen control a theoretical controller similar to one written about in @pid
 For control only the proportional part was used.
 The model is one dimensional and describes an ideally mixed fed-batch bioreactor, which means that the response of the regulation is fast and the proportional part of the @PID regulator is sufficient of efficient regulation.
 
-=== Sparger airation
+=== Sparger aeration
 
-The model uses a sparger with a mixer that dilutes the oxygen into the system. While @PID control injects pure oxygen, the sparger airates the system with filtered air (21% oxygen).
+The model uses a sparger with a mixer that dilutes the oxygen into the system. While @PID control injects pure oxygen, the sparger air rates the system with filtered air (21% oxygen).
 
 The air flow from the sparger and the are combined.
-Afterwards $k L a$ is calculated specific to the system using the power input of the system and the combined flow.
+Afterwards $k L a$ (Volumetric Mass Transfer Coefficient) is calculated specific to the system using the power input of the system and the combined flow.
 
-Next the the ammount of oxygen released into the system is calculated, by using the Henry's conatant.
+Next the the amount of oxygen released into the system is calculated, by using the Henry's constant.
 Afterwards oxygen transfer rate (@OTR) is calculated from which oxygen uptake rate (@OUR) is substracted to get the oxygen change.
 
 
 == Total balance
 
-Since the bioreactor model is reciving a steady supply of substrate, total balance of the system needs to be calculated.
-@VCD and product get diluted, while glucose and glutamine can get concentrated given if the concentration of the feed is bigger than the concentration of the biroeactor.
+Since the bioreactor model is receiving a steady supply of substrate, total balance of the system needs to be calculated.
+@VCD and product get diluted, while glucose and glutamine can get concentrated given if the concentration of the feed is bigger than the concentration of the bioreactor.
 
 
 == parameters of the system

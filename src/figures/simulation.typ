@@ -4,9 +4,6 @@
 
 #import "@preview/oxifmt:0.2.1": strfmt
 
-
-let target = "/data/simple_fit"
-
 #let get_plot(target) = {
   let plots = csv(target + ".csv", row-type: dictionary).map(
   ((minutes, volume, vcd,glutamin,glucose,DO,c_O2,oxygen,product)) => (
@@ -100,7 +97,7 @@ let target = "/data/simple_fit"
     fi_oxygen_max: $L / #t$,
     max_flow: $L / #t$,
     volume: $L$,
-    vcd: [$(M V C) / (m L)$ #footnote[Million Viable Cells per mL]],
+    vcd: [$(M V C) / (m L)$ #footnote[Million Viable Cells per $m L$]],
     glucose: $g/L$,
     glutamine: $g/L$,
     oxygen_part: $%$,
@@ -183,6 +180,3 @@ let target = "/data/simple_fit"
     ..a.flatten()
   )
 }
-
-
-constants_diff("simple_fit")

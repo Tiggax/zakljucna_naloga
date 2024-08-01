@@ -50,9 +50,9 @@
 
 = Methods
 #include "/src/sec/3metode.typ"
-= Results
+= Results and discussion
 #include "/src/sec/4rezultati.typ"
-= Summary
+= Conclusion
 #include "/src/sec/5summary.typ"
-= Povzetek
+= Daljši povzetek v slovenskem jeziku
 #include "/src/sec/6zaključek.typ"
