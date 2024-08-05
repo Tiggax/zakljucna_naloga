@@ -6,11 +6,11 @@
 
 Bioreaktorji so ključni za industrijsko proizvodnjo različnih biofarmacevtskih produktov. 
 Uporaba celic kitajskega hrčka je postala standard v industriji zaradi njihove visoke produktivnosti in zmožnosti post-translacijske modifikacije proteinov. 
-V nalogi so podrobno obravnavane različne vrste bioreaktorjev, kot so serijski in bioreaktorji z dovajanjem. 
-Poseben poudarek je na bioreaktorjih z dovajanjem, kjer se hranila dodajajo med procesom, kar omogoča boljše pogoje za rast celic in proizvodnjo produktov​.
+V nalogi so podrobno obravnavane različne vrste bioreaktorjev, kot so serijski in bioreaktorji z dohranjevanjem. 
+Poseben poudarek je na bioreaktorjih z dohranjevanjem, kjer se hranila dodajajo med procesom, kar omogoča boljše pogoje za rast celic in proizvodnjo produktov​.
 
-Zaključna naloga predstavlja podroben matematični model bioreaktorja z dovajanjem in uporabo celic kitajskega hrčka (CHO), ki so ključne za proizvodnjo biofarmacevtskih izdelkov zaradi njihove učinkovitosti in stabilnosti pri proizvodnji terapevtskih proteinov.
-Delo se osredotoča na optimizacijo parametrov sistema, ki zagotavlja zanesljivost modela s prilagajanjem eksperimentalnim podatkom. 
+Zaključna naloga predstavlja podroben matematični model bioreaktorja z dohranjevanjem in uporabo celic ovarijev kitajskega hrčka (CHO), ki so ključne za proizvodnjo biofarmacevtskih izdelkov zaradi njihove učinkovitosti in stabilnosti pri proizvodnji terapevtskih proteinov.
+Delo se osredotoča na optimizacijo parametrov sistema, ki zagotavlja zanesljivost modela s prilagajanjem modela na eksperimentalnim podatke. 
 Optimizacija je ključnega pomena za doseganje maksimalne učinkovitosti in zanesljivosti bioreaktorjev, ki se uporabljajo v industrijski proizvodnji biofarmacevtskih izdelkov.
 
 Namen zaključne naloge je bil optimizirati delovanje bioreaktorja z uporabo simulacij, ki analizirajo vpliv različnih pogojev na rast celic in tvorbo produktov. 

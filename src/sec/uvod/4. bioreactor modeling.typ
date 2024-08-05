@@ -10,8 +10,6 @@ Mass balance is a fundamental principle in bioreactor modeling.
 It is used to describe flow of mass into, within and out of a bioreactor.
 This ensures that all mass entering the system is accounted for in either the product, waste or within the reactor itself.
 
-_Accumulation_ is a measure of 
-
 To measure a compound or an element $i$, the balance of that $i$ in a system can be written as _Accumulation_ of _i_ where the system can be written as
 $
 (d(i))/(d t) = E_i - S_i + sum^n_(k=1)R_(k(i))

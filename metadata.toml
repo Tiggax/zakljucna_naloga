@@ -1,8 +1,8 @@
 author = "Tilen Gimpelj"
 studij = "Bioinformatika"
 
-naslov = "Matematični model bioreaktorja CHO celic z dovajanjem"
-title = "Mathematical model of fed-batch bioreactor with CHO cells"
+naslov = "Matematični model bioreaktorja z dohranjevanjem"
+title = "Mathematical model of a fed-batch bioreactor"
 text_lang = "en"
 kljucne_besede = ["bioreaktor", "modeliranje", "Runge-Kutta", "Nelder-Mead", "NDE", "simulacija"]
 key_words = ["bioreactor", "modeling", "Runge-Kutta", "Nelder-Mead", "ODE", "simulation"]
@@ -23,14 +23,14 @@ en = ["",", PhD"]
 
 [kratice]
 "GMP" = "Good manufacturing practices"
-"CHO" = "Chinese Hamster Ovary Cells"
-"rCHO" = "recombinant Chinese Hamster Ovary Cells"
+"CHO" = "Chinese hamster ovary"
+"rCHO" = "recombinant Chinese hamster ovary"
 "DNA" = "Deoxyribonucleic acid"
-"SF" = "Serum Free"
+"SF" = "Serum free"
 "FDA" = "Food and Drug Administration"
 "BHK" = "Baby hamster kidney"
 "HEK" = "Human embryonic kidney"
-"GMO" = "Geneticly modafied organism"
+"GMO" = "Geneticly modified organism"
 "EMEM" = "Eagle's minimum essential medium"
 "PUMS" = "Peking Union Medical School"
 "PUMC" = "Peking Union Medical College"
@@ -39,8 +39,8 @@ en = ["",", PhD"]
 "RK" = "Runge-Kutta"
 "UI" = "User interface"
 "VCD" = "Viable cell density"
-"PID" = "proportional integral derivative"
+"PID" = "Proportional integral derivative"
 "DO" = "Dissolved oxygen"
-"OTR" = "oxygen transfer rate"
-"OUR" = "oxygen uptake rate"
-"kLa" = "Volumetric Mass Transfer Coefficient"
+"OTR" = "Oxygen transfer rate"
+"OUR" = "Oxygen uptake rate"
+"kLa" = "Volumetric mass transfer coefficient"

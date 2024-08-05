@@ -78,7 +78,7 @@
   
   let t = "min"
   let vals = (
-    mu_max: $"MVC"/("ml" #t)$,
+    mu_max: $"MVC"/("mL" #t)$,
     power_input: $W / m^3$,
     ks_glucose: $g/L$,
     ks_glutamine: $g/L$,

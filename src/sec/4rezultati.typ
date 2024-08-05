@@ -221,7 +221,7 @@ Simulations using more detailed dissolution model could be made in the future.
 
 === Minimization function
 
-the model implemented a simple sum of a distance of data points from the calculated value of the model at each point time as a minimization function for the Nelder-Mead method.
+The model implemented a simple sum of a distance of data points from the calculated value of the model at each point time as a minimization function for the Nelder-Mead method.
 This is fast and simple, but created some problems when trying to calculate the best fit for glutamine and glucose, as the "best" value would always become 0.
 A further study into point distance evaluation for data fitting would be beneficial for better solutions to experimental data.
 One possible solution would be to evaluate the best simplex for a given constant, since the model used non optimized values for their simplex.

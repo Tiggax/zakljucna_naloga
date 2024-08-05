@@ -13,12 +13,12 @@ F(x, y(x),y'(x), dots, y^((n))(x)) = 0
 $<general_ode>
 
 where $F$ is the given function. 
-@ODE can be expressed in implicitly like in @general_ode or in explicitly form like
+@ODE can be expressed in implicitly like in @general_ode or in explicit form like
 $
 F(x, y(x),y'(x), dots, y^((n-1))(x)) = y^((n))
 $
 
-They differ from Partial differential equations in the number of variables. @ODE[s]  derivatives are taken only in respect to one variable, where as partial differential equations depend on several independent variables.
+They differ from Partial differential equations in the number of variables. @ODE[s]  derivatives are taken only in respect to one variable, whereas partial differential equations depend on several independent variables.
 
 
 == First order differential equations
@@ -101,7 +101,7 @@ $
 y'(x) = f(x)g(y(x))
 $<product_ode>
 where the $x$ and $y(x)$ parts can be separated in some form of product.
-For @ODE[s],like @product_ode, their form can be reformatted into
+For @ODE[s], like @product_ode, their form can be reformatted into
 $
 integral 1 / (g(y(x))) d y= integral f(x)d x + C
 $
@@ -321,7 +321,7 @@ In the 1970s the algorithm was being included in many major software libraries, 
 The popularity of the algorithm prevails till this day, despite the recent advances in direct search method and the age of the algorithm @singer_2009.
 
 
-The Algorithm was created by modifying the original simplex-based direct search method created by Spendley @spendley_1962.
+The algorithm was created by modifying the original simplex-based direct search method created by Spendley @spendley_1962.
 The original algorithm used two types of transformations to form a new simplex in each step.
 In both of the transformations, the angles between edges in every simplex remained _constant_ throughout iteration, meaning the working simplex changed in size but _not_ shape.
 The Nelder-Mead algorithm included two additional transformations - expansion and contraction, which allowed the simplex to additionally change its _shape_ @singer_2009.
@@ -375,6 +375,6 @@ The Nelder-Mead method uses these operations in its algorithm following the grap
 
 #import "/src/figures/mod.typ": nedel_graph
 #figure(
-  caption: [visualization of the algorithm as described in @nelder_1965[Fig. 1]],
+  caption: [Visualization of the algorithm as described in @nelder_1965[Fig. 1]],
   scale(nedel_graph,x: 80%, y: 80%)
 )<nedelmead-alg>

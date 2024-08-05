@@ -13,7 +13,7 @@ Data for bioreactor model fitting was randomly generated from data points in app
 The Dataset can be seen in @data_figure.
 
 #figure(
-  caption: [data, consisting of different values, and points of no known data.],
+  caption: [Data, consisting of different values, and points of no known data.],
   table(
     columns: 6,
     fill: (x,y) => if y == 0 {color.mix(teal, white)
@@ -47,17 +47,17 @@ The value `Time` was expressed in a 64 bit float,  and the `State` was an `SVect
 == Viable Cell density<vcd-sec>
 
 Viable cell density or @VCD, expresses the number of viable cells in the reactor.
-It is expressed as $10^6 "Cell/mL"$ ($"MVC"/(m L)$) where the only living cells are counted.
+It is expressed as $10^6 "Cell/mL"$ ($"MVC"/(m L)$) where only living cells are counted.
 The model assumes that viability is 100%, this meaning that 100% of cells in the bioreactor are alive at every increment.
 In the model the value is calculated with
 $
 #d("VCD") = mu dot n_"VCD" dot "VCD"
 $
 $n_"VCD"$ is a production phase growth constant.
-This constant changes on the day that the Temperature shift occurs.
+This constant changes on the day that the temperature shift occurs.
 $mu$ is calculated with
 $
-mu = mu_"max" * (c_"gluc" / ("Ks"_"gluc" + c_"gluc")) * (c_"glut" / ("Ks"_"glut" + c_"glut")) * (c_"O2" / ("Ks"_"O2" + c_"O2"))
+mu = mu_"max" dot (c_"gluc" / ("Ks"_"gluc" + c_"gluc")) dot (c_"glut" / ("Ks"_"glut" + c_"glut")) dot (c_"O2" / ("Ks"_"O2" + c_"O2"))
 $
 where $mu_"max"$ is a constant that varies from different strand of @CHO cells.
 This constant is then multiplied with each of the dependant variables using Monod kinetics talked about in @monod_sec. 
@@ -69,7 +69,7 @@ This constant is then multiplied with each of the dependant variables using Mono
 Glucose and glutamine follow simple negative value dependant on 
 
 $
-#d(cgk) = - k_#cgk * "VCD" * (#cgk / ( "Ks"_#cgk + #cgk))
+#d(cgk) = - k_#cgk dot "VCD" dot (#cgk / ( "Ks"_#cgk + #cgk))
 $
 
 where $#cgk$ is the concentration of the substance, and $k_#cgk$ is the depletion constant, while the $"Ks"_#cgk$ is the half-saturation constant.
@@ -79,7 +79,7 @@ where $#cgk$ is the concentration of the substance, and $k_#cgk$ is the depletio
 Product is a substitute for a unknown _metabolite_, that is developed during the bioreactor process.
 
 $
-#d($c_p$) = k_p * "vcd"
+#d($c_p$) = k_p dot "vcd"
 $
 where $k_p$ is a product constant that is changed dependant on the producing product.
 
