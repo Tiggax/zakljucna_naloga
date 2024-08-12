@@ -10,13 +10,13 @@ kljucne_besede = ["bioreaktor", "modeliranje", "Runge-Kutta", "Nelder-Mead", "ND
 key_words = ["bioreactor", "modeling", "Runge-Kutta", "Nelder-Mead", "ODE", "simulation"]
 
 [mentor]
-name = "Aleksander Tošić"
+name = "Aleksandar Tošić"
 sl = ["izr. prof. dr. ", ""]
 en = ["Assoc. Prof.",", PhD"]
 [somentor]
 name = "Domen Vake"
-sl = ["",""]
-en = ["",""]
+sl = ["asist.",""]
+en = ["assist.",""]
 [work_mentor]
 name = "Andrej Pohar"
 sl = ["dr.",""]
