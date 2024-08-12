@@ -1,6 +1,8 @@
 author = "Tilen Gimpelj"
 studij = "Bioinformatika"
 
+cover_page = false
+
 naslov = "Matematični model bioreaktorja z dohranjevanjem"
 title = "Mathematical model of a fed-batch bioreactor"
 text_lang = "en"
