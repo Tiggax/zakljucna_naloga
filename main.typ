@@ -1,4 +1,4 @@
-#import "@preview/sunny-famnit:0.2.0": project
+#import "@local_dev/sunny-famnit:0.3.0": project
 #import "/src/additional.typ" as ab
 
 #let meta = toml("metadata.toml")
@@ -7,8 +7,6 @@
 #let res = meta.remove("kljucne_besede")
 
 // - - - - - Add to template - - - - - 
-#set outline(fill: repeat[.#h(8pt)], indent: 2em)
-#show heading.where(level: 2): it => upper(text(weight: "regular", it))
 // - - - - - - - - - - - - - - - - - -
 
 #show: project.with(
@@ -40,8 +38,6 @@
 
 // - - - - - Add to template - - - - - 
 #show heading.where(level: 1):it => {pagebreak(weak: true);it}
-#show heading: set block(spacing: 2em)
-
 #set text(hyphenate: false)
 #set math.equation(numbering: "(1)")
 // - - - - - - - - - - - - - - - - - -
