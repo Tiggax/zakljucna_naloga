@@ -11,15 +11,15 @@ key_words = ["bioreactor", "modeling", "Runge-Kutta", "Nelder-Mead", "ODE", "sim
 
 [mentor]
 name = "Aleksandar Tošić"
-sl = ["izr. prof. dr. ", ""]
-en = ["Assoc. Prof.",", PhD"]
+sl = ["doc. dr. ", ""]
+en = ["assist. prof. ",", PhD"]
 [somentor]
 name = "Domen Vake"
-sl = ["asist.",""]
-en = ["assist.",""]
+sl = ["asist. ",""]
+en = ["assist. ",""]
 [work_mentor]
 name = "Andrej Pohar"
-sl = ["dr.",""]
+sl = ["dr. ",""]
 en = ["",", PhD"]
 
 
